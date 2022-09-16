@@ -1,6 +1,30 @@
 ﻿/* 执行脚本前，请先选择数据库，脚本会先删除表，然后再创建表，请谨慎执行！！！ */;
 /* use [YiShaAdmin] */
 
+--==========================================================================Customer part====================================
+IF OBJECT_ID('[dbo].[Test_T1]', 'U') IS NOT NULL DROP TABLE [dbo].[Test_T1]; 
+CREATE TABLE [dbo].[Test_T1] (
+    [Id]             		[bigint]		 NOT NULL,
+    [BaseIsDelete]			[int]			 NOT NULL,
+	[BaseCreateTime]		[datetime]		 NOT NULL,
+	[BaseModifyTime]		[datetime]		 NOT NULL,
+	[BaseCreatorId]			[bigint]		 NOT NULL,
+	[BaseModifierId]		[bigint]		 NOT NULL,
+	[BaseVersion]			[int]			 NOT NULL,
+    [Name]					[nvarchar](50)	 NOT NULL,
+	[Location]				[nvarchar](200)	 NULL,
+	[Sex]					[bit]			 NOT NULL,
+	[Age]					[int]			 NULL,
+	[IsEnale]				[bit]			 NULL,
+     CONSTRAINT [PK_Test_T1] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+go
+
+--==========================================================================System part====================================
 IF OBJECT_ID('[dbo].[SysArea]', 'U') IS NOT NULL DROP TABLE [dbo].[SysArea]; 
 CREATE TABLE [dbo].[SysArea](
 	[Id]					[bigint]		 NOT NULL,

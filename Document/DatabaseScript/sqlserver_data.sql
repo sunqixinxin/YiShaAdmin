@@ -1,6 +1,16 @@
 ﻿/*  初始化数据 */;
 /* use [YiShaAdmin] */
 
+--==========================================================================Customer part====================================
+INSERT into [dbo].[Test_T1] ([Id],[BaseIsDelete],[BaseCreateTime],[BaseModifyTime],[BaseCreatorId],[BaseModifierId],[BaseVersion],[Name],[Location],[Sex],[Age],[IsEnale])
+select 16508640061120570, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'张猛', N'江苏省无锡市新吴区', 1, 20, 1 UNION ALL
+select 16508640061120571, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'张丽丽', N'安徽省合肥市高新区', 0, 20, null
+select 16508640061120572, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'李猛', N'江苏省无锡市锡山区', 1, 40, 1 UNION ALL
+select 16508640061120573, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'王丽丽', N'北京市朝阳区', 0, 50, null
+select 16508640061120574, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'松江', N'江苏省无锡市新吴区', 1, 60, 1 UNION ALL
+select 16508640061120575, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'谢青青', N'江苏省无锡市锡山区', 0, 70, 0
+go
+--==========================================================================System part====================================
 INSERT [dbo].[SysArea] ([Id], [BaseIsDelete], [BaseCreateTime], [BaseModifyTime], [BaseCreatorId], [BaseModifierId], [BaseVersion], [AreaCode], [ParentAreaCode], [AreaName], [ZipCode], [AreaLevel]) VALUES (16508640061120570, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'110000', N'0', N'北京', N'', 1)
 INSERT [dbo].[SysArea] ([Id], [BaseIsDelete], [BaseCreateTime], [BaseModifyTime], [BaseCreatorId], [BaseModifierId], [BaseVersion], [AreaCode], [ParentAreaCode], [AreaName], [ZipCode], [AreaLevel]) VALUES (16508640061120571, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'110100', N'110000', N'北京市', N'', 2)
 INSERT [dbo].[SysArea] ([Id], [BaseIsDelete], [BaseCreateTime], [BaseModifyTime], [BaseCreatorId], [BaseModifierId], [BaseVersion], [AreaCode], [ParentAreaCode], [AreaName], [ZipCode], [AreaLevel]) VALUES (16508640061120572, 0, CAST(0x0000A9C001110174 AS DateTime), CAST(0x0000A9C001110174 AS DateTime), 0, 0, 0, N'110101', N'110100', N'东城区', N'', 3)

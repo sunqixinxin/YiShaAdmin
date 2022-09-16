@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 
 namespace YiSha.Enum
 {
+    public enum SexEnum
+    {
+        [Description("男")]
+        Yes = 1,
+
+        [Description("女")]
+        No = 0
+    }
+
     public enum StatusEnum
     {
         [Description("启用")]
